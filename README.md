@@ -1,6 +1,6 @@
 # dtracker
 <h1 align="center"><img src="https://user-images.githubusercontent.com/6822604/179356367-c781af73-e8ae-4959-9871-75e0476fcea5.png"/></h1>
-<h4 align="center">通用前端网络接口拦截库</h4>
+<h4 align="center">通用前端网络请求拦截库</h4>
 <p align="center">
 支持Ajax，Fetch，Image，navigator.sendBeacon等请求。常用于接口异常监控，数据上报，数据旁路等场景
 </p>
