@@ -1,0 +1,53 @@
+{
+    "extends": "airbnb-base",
+    "env": {
+      "browser": true
+    },
+    "plugins": ["import"],
+    "parser": "babel-eslint",
+    "rules": {
+      "arrow-parens": ["error", "as-needed", { "requireForBlockBody": false }],
+      "consistent-return": ["off"],
+      "prefer-rest-params": ["off"],
+      "no-else-return": ["off"],
+      "no-param-reassign": ["off"],
+      "no-restricted-syntax": ["off"],
+      "no-useless-escape": ["warn"],
+      "no-underscore-dangle": [
+        "off",
+        { "allowAfterThis": true, "allowAfterSuper": true }
+      ],
+      "no-restricted-globals": ["off"],
+      "guard-for-in": ["off"],
+      "no-console": ["off"],
+      "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+      "import/prefer-default-export": ["off"],
+      "class-methods-use-this": ["off"],
+      "camelcase": ["warn"],
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": [
+            "benchmark/**",
+            "test/**", 
+            "tests/**",
+            "spec/**", 
+            "**/__tests__/**", 
+            "test.js",
+            "test-*.js", 
+            "**/*.test.js", 
+            "**/*.spec.js", 
+            "**/webpack.config.js", 
+            "**/webpack.config.*.js",
+            "**/rollup.config.js",
+            "**/rollup.config.*.js",
+            "**/gulpfile.js", 
+            "**/gulpfile.*.js",
+            "**/Gruntfile"
+          ],
+          "optionalDependencies": false
+        }
+      ]
+    }
+  }
+  
