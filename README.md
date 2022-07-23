@@ -18,8 +18,7 @@ npm install dtracker --save
 
 ```
 ## 二、如何使用
-### 1. 引入dtracker
- + **自动基于已经上报的数据做上报**
+### 1.自动基于已经上报的数据做上报
  ```javascript
   dtracker.create({
     onProxy: function(data) {
@@ -39,7 +38,7 @@ npm install dtracker --save
     },
 })
  ```
- + **使用dtracker.doReport在代码中进行手动上报**
+### 2.使用dtracker.doReport在代码中进行手动上报
 ```javascript
   dtracker.doReport({
     baseUrl: 'https://reporteurl.com', // 填入数据上报目标地址
