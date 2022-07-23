@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <title>dtracker 通用前端网络接口拦截库</title>
+    <script charset="utf-8" src="../dist/index.js"></script>
+    <style>
+    .tracking-ws {
+      width: 100px;
+      height: 50px;
+      background-color: #999;
+    }
+    </style>
+  </head>
+
+  <body>
+    <script charset="utf-8">
+      dtracker.create({
+        baseUrl: 'https://reporturl',
+        onBeforeSend: function(data) {
+          return false;
+        },
+        onProxy: function(data) {
+          if (data.type === 'beacon') {
+            console.log('onProxy', data.data);
+          }
+        }
+      });
+      // 捕获new Image上报
+      dtracker.doReport({
+        data: {
+          sOp: 'pageView',
+          moduleName: 'page',
+          extInfo: JSON.stringify({
+            from: 'plugin',
+            version: '0.2.0',
+          })
+        }
+      });
+     console.warn('dtracker', dtracker);  
+    </script>
+  </body>
+</html>
